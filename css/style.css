@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+/* Open Sans */
+:root {
+    --axent1: #e76f3d;
+    --baseColor: #f3e9e7;
+    --axent2: #00a7c7;
+    --textColor: #11111c;
+  } 
+* {
+    font-family: Open Sans;
+} 
+body{
+    background-color: var(--baseColor);
+} 
+header {
+    padding: 30px 0;
+  }
+h1 {
+    color : var(--axent1);
+    font-weight: 700;
+}
+img{
+    max-width:100%; 
+    height:auto;
+    border: 2px solid var(--axent1);
+    
+}
+/* navigation */
+nav {
+    background-color: var(--axent2);
+    display: flex;
+    padding: 20px 90px;
+    margin-bottom: 30px;
+}
+.shop, .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 30px;
+    width: 70px;
+}
+.shop:hover, .cart:hover {
+    border-bottom: 3px solid var(--axent1);
+}
+/* Shops list */
+.shops {
+    border: 2px solid var(--axent2);
+    max-width: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+.shops:hover {
+    background-color: var(--axent1);
+    color: var(--baseColor);
+}
+
+/* Goods list */
+.goods {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.goodsCard{
+    overflow: hidden;
+    width: 205px;
+    font-size: large;
+    
+}
+.goods__img {       
+    width: 200px;
+
+}
+
+/* User info */
+
+
+/* Order info */
+#submit {
+    background-color: var(--axent1);
+    color: white;
+    border-radius: 5px;
+    border-color: var(--axent1);
+}
+
