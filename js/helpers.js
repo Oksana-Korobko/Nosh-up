@@ -111,7 +111,8 @@ function showUserInfo(){
 function showOrder () {
     ordersList.textContent = "";
     for (let i = 0; i< cart.length; i++){
-        const numOrder = i;
+        const numOrder = i;  
+        calcTotalPrice ();
         const orderCard = createElement('div', ordersList);
         const elemImg = document.createElement('div');
         elemImg.classList.add('orders__img');
@@ -126,7 +127,7 @@ function showOrder () {
         quantityInput.setAttribute('numOrder', numOrder);
         quantityInput.value =  cart[i].quantity;
         
-        // добавть цену за 1 продукт ----------------------------------------!
+      
         quantityInput.addEventListener('change', costCalc);
         
     }
@@ -138,17 +139,22 @@ function costCalc(event){
 
     // cart[orderNumber].price = shops[orderNumber].price  * event.target.value;
     cart[orderNumber].cost = Number(cart[orderNumber].price) * Number(event.target.value);
-    console.log(cart[orderNumber].cost )
-    cart[orderNumber].quantity = event.target.value
+    console.log(cart[orderNumber].cost );
+    cart[orderNumber].quantity = event.target.value;
+    calcTotalPrice ();
 
+    
+
+    
+}
+
+function calcTotalPrice (){
     totalPrice = 0;
     for (let i = 0; i<cart.length; i++){
         totalPrice += Number(cart[i].cost);
     }        
-    const costTotal = document.querySelector('#price');
+    
     costTotal.textContent = totalPrice;
 
-
-    
 }
 
