@@ -17,7 +17,7 @@ function showGoods(event){
     goodsList.map(el => {
         goodsCard(el)
     })
-    // goodsList.textContent = goods;
+  
 }
 function goodsCard(article){
     const elem = document.createElement('div');
@@ -44,8 +44,7 @@ function addToCart(event){
         order.cost = shops[numShop].goods[id-1].price;
         order.quantity = 1
         cart.push(order);   
-        
-        console.log(cart)    
+           
     }
    
 }
@@ -137,9 +136,9 @@ function showOrder () {
 function costCalc(event){
     const orderNumber = event.target.getAttribute('numOrder');
 
-    // cart[orderNumber].price = shops[orderNumber].price  * event.target.value;
+    
     cart[orderNumber].cost = Number(cart[orderNumber].price) * Number(event.target.value);
-    console.log(cart[orderNumber].cost );
+  
     cart[orderNumber].quantity = event.target.value;
     calcTotalPrice ();
 
