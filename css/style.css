@@ -76,6 +76,9 @@ nav {
 
 
 /* Order info */
+.orders__img {
+    width: 100px;
+}
 #submit {
     background-color: var(--axent1);
     color: white;
