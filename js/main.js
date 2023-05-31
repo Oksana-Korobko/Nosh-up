@@ -17,15 +17,15 @@ const shops = [
              },
              {
                "id": 3, 
-               "name": "Classic Shrimp Scampi",
-                "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/07/16/0/FNM_090120-Classic-Shrimp-Scampi_s4x3.jpg.rend.hgtvcom.826.620.suffix/1594915956100.jpeg", 
+               "name": "Quorn Vegan Quiche",
+                "url": "https://images.ctfassets.net/uexfe9h31g3m/1itnlWpRu57DPn3r0z9voP/091ff09f8ee268c46aac315c2c0c6ab7/Vegan_quiche_4X3_crop_copy.jpg?w=768&h=576&fm=webp&fit=thumb&q=90", 
                 "price": 13  
              },
              {
                "id": 4, 
-               "name": "Linguine and Clams",
-                "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/8/15/0/CASH_1_s4x3.jpg.rend.hgtvcom.826.620.suffix/1408128762992.jpeg" , 
-                "price": 15
+               "name": "Mini Quiche Lorraine",
+                "url": "https://images.ctfassets.net/uexfe9h31g3m/3bm2oFUgnSQsSUko4aI6WM/87374424a59aca6e284ae34fd142b659/Veggie_Quiche_Lorraine-Insta_3_copy.jpg?w=768&h=576&fm=webp&fit=thumb&q=90" , 
+                "price": 9
              }
              
         ]
@@ -60,13 +60,122 @@ const shops = [
              }
              
         ]
-    }
+    },
+    {
+      "name": "Neko sushi",
+      "goods": [
+          {
+             "id": 1,
+             "name": "TEMPURA MIX",
+             "url": "https://neko.ee/wp-content/uploads/2022/10/0B7A1330-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82-1-968x646.jpg", 
+             "price": 10
+          },
+          {
+             "id": 2, 
+             "name": "TUNA TATAKI",
+              "url": "https://neko.ee/wp-content/uploads/2016/11/IMG_34031.jpg" , 
+              "price": 12 
+           },
+           {
+             "id": 3, 
+             "name": "TEMPURA KING PRAWNS",
+              "url": "https://neko.ee/wp-content/uploads/2015/09/IMG_69812-665x443.jpg", 
+              "price": 13  
+           },
+           {
+             "id": 4, 
+             "name": "SPRING ROLLS",
+              "url": "https://neko.ee/wp-content/uploads/2015/09/IMG_69771-665x443.jpg" , 
+              "price": 7
+           },
+           {
+            "id": 5, 
+            "name": "SEAFOOD SALAD",
+             "url": "https://neko.ee/wp-content/uploads/2014/05/Neko-235_52-665x443.jpg" , 
+             "price": 15
+          },
+          {
+            "id": 6, 
+            "name": "MISO SOUP",
+             "url": "https://neko.ee/wp-content/uploads/2013/10/IMG_0067_3-Nom.232-665x443.jpg" , 
+             "price": 15
+          },
+           
+      ]
+  },
+  {
+   "name": "Good Afternoon",
+   "goods": [
+       {
+          "id": 1,
+          "name": "Grilled S’mores Pie",
+          "url": "https://www.foodandwine.com/thmb/OtnuD9dfVNsNWws-oivpIEUUzi4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Grilled-Smores-Pie-FT-RECIPE1022-200-145d1a57e8ef4375a131bcfcaf22c395.jpg", 
+          "price": 10
+       },
+       {
+          "id": 2, 
+          "name": "Tamarind Chicken",
+           "url": "https://www.foodandwine.com/thmb/nDBGGuZzVOHIUkLT_fWorNv3nS8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Tamarind-Chicken-FT-RECIPE0522-80072d93f7bc4bc7abf1dcf5b5317b0c.jpg" , 
+           "price": 15 
+        },
+        {
+          "id": 3, 
+          "name": "Santa Maria BBQ",
+           "url": "https://www.foodandwine.com/thmb/HGhgKqMTNwSON3LcbPCov8BKq_0=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Traditional-Santa-Maria-BBQ-Oak-Wood-Grilled-Tri-Tip-FT-recipe0619-48c62f7da66c4a9aaea81b599a0846de.jpg", 
+           "price": 12  
+        },
+        {
+          "id": 4, 
+          "name": "Citrus Chicken",
+           "url": "https://www.foodandwine.com/thmb/cw8nSh_2cl5KPBMTbfjlv11bzRg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/citrus-and-fennel-chicken-with-olives-and-calabrian-chiles-FT-RECIPE0222-c1ef1d87fa514fa08e1616617cdab618.jpg" , 
+           "price": 13
+        },
+        {
+         "id": 5, 
+         "name": "Lamb Leg Steak",
+          "url": "https://www.foodandwine.com/thmb/sSj57pkuyCqYz6LpzoSCLpxBOJ0=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lamb-leg-steak-with-pistachio-gremolata-and-marsala-onions-ft-RECIPE0718-de112b36e7f646cda24e6934bfc290f6.jpg" , 
+          "price": 16
+       }
+        
+   ]
+},
+{
+   "name": "DELI FOOD",
+   "goods": [
+       {
+          "id": 1,
+          "name": "Ultimate Ham Sandwich",
+          "url": "https://images.ctfassets.net/uexfe9h31g3m/30PK5LALEpgExQcAR9j522/7becc83c5c40312d3e81acbe5dbeb44a/Quorn_UK_deli_recipe_yorkshire-ham_1024x768.jpg?w=768&h=576&fm=webp&fit=thumb&q=90", 
+          "price": 7
+       },
+       {
+          "id": 2, 
+          "name": "Caesar Salad Sandwich",
+           "url": "https://images.ctfassets.net/uexfe9h31g3m/5nJ88WhXEePmcqUMs76nCr/51e61ff1ba65b8428753b8f0c13ffa76/Quorn_UK_deli_recipe_roast-chicken_1024x768.jpg?w=768&h=576&fm=webp&fit=thumb&q=90" , 
+           "price": 12 
+        },
+        {
+          "id": 3, 
+          "name": "Classic Shrimp Scampi",
+           "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/07/16/0/FNM_090120-Classic-Shrimp-Scampi_s4x3.jpg.rend.hgtvcom.826.620.suffix/1594915956100.jpeg", 
+           "price": 13  
+        },
+        {
+          "id": 4, 
+          "name": "Linguine and Clams",
+           "url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/8/15/0/CASH_1_s4x3.jpg.rend.hgtvcom.826.620.suffix/1408128762992.jpeg" , 
+           "price": 15
+        }
+        
+   ]
+},
 
     
     
 ];
 
 const cart = [];
+const orders = [];
 const ui = document.querySelector('.userInfo');
 const order = document.querySelector('.order');
 const goods = document.querySelector('.goods');
@@ -84,6 +193,7 @@ if (localStorage.length === 0) {
    localStorage.setItem('shops', JSON.stringify(shops));
 };
 
+showShops();
 navShop.addEventListener('click', showShops);
 navCart.addEventListener('click', showCart);
 

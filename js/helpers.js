@@ -76,7 +76,7 @@ function createList(){
 function showShops(){
     ui.style.display = "none";
     order.style.display = "none";
-    goods.style.display = "block";
+    goods.style.display = "flex";
     shopsList.style.display = "block";
     shopsList.textContent = "";
     createList();
@@ -122,9 +122,11 @@ function showOrder () {
         createElement('div', orderInfo, 'Quantity: ');
         
       
-        const quantityInput = createElement('input',orderInfo);  
+        const quantityInput = createElement('input',orderInfo); 
+        quantityInput.setAttribute("type", "number"); 
         quantityInput.setAttribute('numOrder', numOrder);
         quantityInput.value =  cart[i].quantity;
+        quantityInput.classList.add('quantity_input');
         
       
         quantityInput.addEventListener('change', costCalc);
@@ -155,5 +157,9 @@ function calcTotalPrice (){
     
     costTotal.textContent = totalPrice;
 
+}
+function submitOrder(){
+    orders.push(cart);
+    console.log(orders)
 }
 

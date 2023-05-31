@@ -15,6 +15,8 @@ body{
 header {
     padding: 30px 0;
   }
+
+
 h1 {
     color : var(--axent1);
     font-weight: 700;
@@ -22,8 +24,14 @@ h1 {
 img{
     max-width:100%; 
     height:auto;
-    border: 2px solid var(--axent1);
+    border: 2px solid var(--axent1);    
+}
+.logoContainer {
     
+    width: 80px;
+}
+.logo {
+    border: none;
 }
 /* navigation */
 nav {
@@ -46,6 +54,7 @@ nav {
 /* Shops list */
 .shops {
     border: 2px solid var(--axent2);
+    text-transform: uppercase;
     max-width: 80%;
     margin: 10px;
     padding: 10px;
@@ -64,10 +73,13 @@ nav {
 .goodsCard{
     overflow: hidden;
     width: 205px;
-    font-size: large;
+    height: 250px;
+    font-size: medium;
+    text-transform: uppercase;
     
 }
 .goods__img {       
+   margin-top:5px ;
     width: 200px;
 
 }
@@ -78,6 +90,9 @@ nav {
 /* Order info */
 .orders__img {
     width: 100px;
+}
+.quantity_input {
+    width: 50px;
 }
 #submit {
     background-color: var(--axent1);
