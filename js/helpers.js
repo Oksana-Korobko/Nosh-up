@@ -37,8 +37,7 @@ function goodsCard(article){
 
 function addToCart(event){
     const id = event.target.getAttribute('article');
-    // orderNum++;
-    // shops[numShop].goods[id-1].orderID = orderNum;
+   
     if (! cart.includes(shops[numShop].goods[id-1])) {
         const order = shops[numShop].goods[id-1];
         order.cost = shops[numShop].goods[id-1].price;
@@ -94,7 +93,7 @@ function showCart(){
 };
 // User Info
 function showUserInfo(){
-    ui.textContent = "";
+    ui.innerHTML = "<h2>Introduction</h2>";
     const userForm = document.createElement('form');
     createElement('div', userForm, 'Name', undefined);
     createElement('input', userForm, undefined, 'uName');
@@ -107,31 +106,37 @@ function showUserInfo(){
     ui.appendChild(userForm);
 }
 
-function showOrder () {
+
+function showOrder () { 
+
     ordersList.textContent = "";
-    for (let i = 0; i< cart.length; i++){
+    if (cart.length === 0) {
+        orderTitle.textContent = 'Shopping cart is empty';
+        orderTotal.style.display = 'none';
+    } else {
+        orderTitle.textContent = "Your order:"
+        orderTotal.style.display = 'block';
+        for (let i = 0; i< cart.length; i++){
         const numOrder = i;  
         calcTotalPrice ();
-        const orderCard = createElement('div', ordersList);
+        const orderCard = createElement('div', orderTotal);
         const elemImg = document.createElement('div');
         elemImg.classList.add('orders__img');
         orderCard.appendChild(elemImg);
         elemImg.insertAdjacentHTML('beforeend', '<img src="'+ cart[i].url +'">');
         const orderInfo = createElement('div', orderCard);
         createElement('div', orderInfo, cart[i].name);        
-        createElement('div', orderInfo, 'Quantity: ');
-        
-      
+        createElement('div', orderInfo, 'Quantity: ');  
         const quantityInput = createElement('input',orderInfo); 
         quantityInput.setAttribute("type", "number"); 
         quantityInput.setAttribute('numOrder', numOrder);
         quantityInput.value =  cart[i].quantity;
         quantityInput.classList.add('quantity_input');
-        
-      
-        quantityInput.addEventListener('change', costCalc);
-        
+        quantityInput.addEventListener('change', costCalc); 
+        }  
+    
     }
+    
    
 }
 

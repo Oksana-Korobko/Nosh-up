@@ -184,6 +184,9 @@ const ordersList = document.querySelector('.ordersList');
 const navShop = document.querySelector('.shop');
 const navCart = document.querySelector('.cart');
 const costTotal = document.querySelector('#price');
+const orderTitle = document.querySelector('.orderTitle');
+const orderTotal = document.querySelector('.orderTotal');
+
 let orderNum = 0;
 let numShop;
 
