@@ -108,18 +108,17 @@ function showUserInfo(){
 
 
 function showOrder () { 
-
     ordersList.textContent = "";
     if (cart.length === 0) {
         orderTitle.textContent = 'Shopping cart is empty';
         orderTotal.style.display = 'none';
     } else {
         orderTitle.textContent = "Your order:"
-        orderTotal.style.display = 'block';
+        ordersList.textContent = "";
         for (let i = 0; i< cart.length; i++){
         const numOrder = i;  
         calcTotalPrice ();
-        const orderCard = createElement('div', orderTotal);
+        const orderCard = createElement('div', ordersList);
         const elemImg = document.createElement('div');
         elemImg.classList.add('orders__img');
         orderCard.appendChild(elemImg);
@@ -132,7 +131,8 @@ function showOrder () {
         quantityInput.setAttribute('numOrder', numOrder);
         quantityInput.value =  cart[i].quantity;
         quantityInput.classList.add('quantity_input');
-        quantityInput.addEventListener('change', costCalc); 
+        quantityInput.addEventListener('change', costCalc);
+        orderTotal.style.display = 'block'; 
         }  
     
     }
@@ -147,11 +147,7 @@ function costCalc(event){
     cart[orderNumber].cost = Number(cart[orderNumber].price) * Number(event.target.value);
   
     cart[orderNumber].quantity = event.target.value;
-    calcTotalPrice ();
-
-    
-
-    
+    calcTotalPrice ();   
 }
 
 function calcTotalPrice (){
@@ -159,12 +155,24 @@ function calcTotalPrice (){
     for (let i = 0; i<cart.length; i++){
         totalPrice += Number(cart[i].cost);
     }        
-    
     costTotal.textContent = totalPrice;
 
 }
 function submitOrder(){
+
+    user.name = document.querySelector( "input[uName='uName']").value;
+    user.email = document.querySelector( "input[uEmail='uEmail']").value;
+    user.phone = document.querySelector( "input[uPhone='uPhone']").value;
+    user.address = document.querySelector( "input[uAddress='uAddress']").value;
+    
     orders.push(cart);
-    console.log(orders)
+    let orderComplete = {};
+    orderComplete.user = user;
+    orderComplete.orders = orders;
+
+
+   
+    history.push (orderComplete);
+    console.log(history);
 }
 

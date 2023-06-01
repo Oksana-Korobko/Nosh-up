@@ -186,6 +186,8 @@ const navCart = document.querySelector('.cart');
 const costTotal = document.querySelector('#price');
 const orderTitle = document.querySelector('.orderTitle');
 const orderTotal = document.querySelector('.orderTotal');
+const history = [];
+const user = {};
 
 let orderNum = 0;
 let numShop;
