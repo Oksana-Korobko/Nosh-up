@@ -136,6 +136,7 @@ function showOrder () {
         const numOrder = i;  
         calcTotalPrice ();
         const orderCard = createElement('div', ordersList);
+        orderCard.classList.add('orderCard');
         const elemImg = document.createElement('div');
         elemImg.classList.add('orders__img');
         orderCard.appendChild(elemImg);

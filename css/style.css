@@ -99,10 +99,19 @@ nav {
 .add:hover {
     background-color: var(--axent1);
 }
-
-
+.orderTitle {
+    font-size: xx-large;
+    
+}
+.orderCard {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 20px;
+}
 .orders__img {
-    width: 100px;
+    width: 150px;
+    margin: 10px;
 }
 .quantity_input {
     width: 50px;
