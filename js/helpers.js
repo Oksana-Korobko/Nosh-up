@@ -99,6 +99,7 @@ function showSlider(){
 }
 
 function showCart(){
+    sliderBlock.style.display = 'none';
     ui.style.display = "block";
     order.style.display = "block";
     goods.style.display = "none";
@@ -179,26 +180,18 @@ function calcTotalPrice (){
 function submitOrder(){
     cart = [];
     showShops();
+    let user = {};
+    user.name = document.querySelector( "input[uName='uName']").value;
+    user.email = document.querySelector( "input[uEmail='uEmail']").value;
+    user.phone = document.querySelector( "input[uPhone='uPhone']").value;
+    user.address = document.querySelector( "input[uAddress='uAddress']").value;
+    orders.push(cart);
+    let orderComplete = {};
+    orderComplete.user = user;
+    orderComplete.orders = orders;
+    cart = [];
+    history.push (orderComplete);
+    localStorage.setItem('history', JSON.stringify(history));
+    
 }
 
-// let user = {};
-    // console.log(user);
-    // user.name = document.querySelector( "input[uName='uName']").value;
-    // user.email = document.querySelector( "input[uEmail='uEmail']").value;
-    // user.phone = document.querySelector( "input[uPhone='uPhone']").value;
-    // user.address = document.querySelector( "input[uAddress='uAddress']").value;
-    
-    // orders.push(cart);
-    // let orderComplete = {};
-    // orderComplete.user = user;
-    // orderComplete.orders = orders;
-    // cart = [];
-
-
-   
-   
-    // history.push (orderComplete);
-
-    // localStorage.setItem('history', JSON.stringify(history));
-    // console.log(history);
-   
