@@ -51,6 +51,15 @@ nav {
 .shop:hover, .cart:hover {
     border-bottom: 3px solid var(--axent1);
 }
+.slider {
+    display: flex;
+    align-items: center;
+}
+.photo {
+    margin: auto;
+    max-height: 280px;
+    margin-top: 5px;
+}
 /* Shops list */
 .shops {
     border: 2px solid var(--axent2);
@@ -83,11 +92,14 @@ nav {
     width: 200px;
 
 }
+.add {
+    background-color: var(--baseColor);
+    text-transform: uppercase;
+}
+.add:hover {
+    background-color: var(--axent1);
+}
 
-/* User info */
-
-
-/* Order info */
 
 .orders__img {
     width: 100px;

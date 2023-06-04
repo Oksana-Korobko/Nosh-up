@@ -1,4 +1,3 @@
-
 const shops = [
     {
         "name": "Summer Treat",
@@ -174,8 +173,8 @@ const shops = [
     
 ];
 
-const cart = [];
-const orders = [];
+let cart = [];
+let orders = [];
 const ui = document.querySelector('.userInfo');
 const order = document.querySelector('.order');
 const goods = document.querySelector('.goods');
@@ -186,12 +185,13 @@ const navCart = document.querySelector('.cart');
 const costTotal = document.querySelector('#price');
 const orderTitle = document.querySelector('.orderTitle');
 const orderTotal = document.querySelector('.orderTotal');
+const sliderBlock =  document.querySelector('.slider');
 const history = [];
-const user = {};
+
 
 let orderNum = 0;
 let numShop;
-
+showSlider();
 let totalPrice = 0;
 //  is LocalStorage empty?
 if (localStorage.length === 0) {
@@ -199,6 +199,7 @@ if (localStorage.length === 0) {
 };
 
 showShops();
+
 navShop.addEventListener('click', showShops);
 navCart.addEventListener('click', showCart);
 

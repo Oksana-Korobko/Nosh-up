@@ -11,6 +11,7 @@ function createElement(elType, parent, text, attr) {
 };
 
 function showGoods(event){
+    sliderBlock.style.display = 'none';
     numShop = event.target.getAttribute('number');
     goods.textContent = "";
     const goodsList = shops[numShop].goods;
@@ -31,6 +32,7 @@ function goodsCard(article){
     elemPrice.textContent = "Price: " + article.price;
     elem.appendChild(elemPrice);
     btnCreate("add", article.id, elem, addToCart);
+   
     goods.appendChild(elem);
       
 }
@@ -54,11 +56,9 @@ function btnCreate (attr, article, parent, handler){
     btn.setAttribute("article", article);
     btn.textContent = attr;
     btn.addEventListener('click', handler);
+    btn.classList.add(attr);
     parent.appendChild(btn);
 }
-
-
-
 function createList(){
     const shopsList = document.querySelector('.shopsList');
     for (let i = 0; i< shops.length; i++){
@@ -72,13 +72,30 @@ function createList(){
     
 }
 
-function showShops(){
+function showShops(){   
     ui.style.display = "none";
     order.style.display = "none";
     goods.style.display = "flex";
     shopsList.style.display = "block";
     shopsList.textContent = "";
     createList();
+}
+function showSlider(){
+    let photo = document.querySelector(".photo");
+    photo.src = shops[0].goods[0].url
+    let nPhoto = 1;
+    let timer = 3000;
+    setInterval(changePhoto, timer);
+    function changePhoto(){
+    
+        if (nPhoto===6){
+            nPhoto = 1;
+        } else {
+            nPhoto++;
+        };
+        photo.src="../Images/dish-"+ nPhoto+ ".webp";    
+    }
+        
 }
 
 function showCart(){
@@ -159,20 +176,28 @@ function calcTotalPrice (){
 
 }
 function submitOrder(){
+    cart = [];
+    showShops();
+}
 
-    user.name = document.querySelector( "input[uName='uName']").value;
-    user.email = document.querySelector( "input[uEmail='uEmail']").value;
-    user.phone = document.querySelector( "input[uPhone='uPhone']").value;
-    user.address = document.querySelector( "input[uAddress='uAddress']").value;
+// let user = {};
+    // console.log(user);
+    // user.name = document.querySelector( "input[uName='uName']").value;
+    // user.email = document.querySelector( "input[uEmail='uEmail']").value;
+    // user.phone = document.querySelector( "input[uPhone='uPhone']").value;
+    // user.address = document.querySelector( "input[uAddress='uAddress']").value;
     
-    orders.push(cart);
-    let orderComplete = {};
-    orderComplete.user = user;
-    orderComplete.orders = orders;
+    // orders.push(cart);
+    // let orderComplete = {};
+    // orderComplete.user = user;
+    // orderComplete.orders = orders;
+    // cart = [];
 
 
    
-    history.push (orderComplete);
-    console.log(history);
-}
+   
+    // history.push (orderComplete);
 
+    // localStorage.setItem('history', JSON.stringify(history));
+    // console.log(history);
+   
